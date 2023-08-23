@@ -25,10 +25,10 @@
             <div class="card card-body">
                 <form action="save-task.php" method="post">
                     <div class="form-groupp">
-                        <input type="text" name="title" class="form-control" placeholder="titulo tarea" autofocus>
+                        <input type="text" name="title" class="form-control" placeholder="Dependencia" autofocus>
                     </div>
                     <div class="form-groupp">
-                        <textarea name="description" rows="2" class="form-control mt-1" placeholder="descripcion"></textarea>
+                        <textarea name="description" rows="2" class="form-control mt-1" placeholder="Problema"></textarea>
                     </div>
                     <input type="submit" class="btn btn-success btn-block mt-1" name="save-task" value="guardar">
                 </form>
@@ -43,7 +43,7 @@
         <thead>
             <tr>
             <!-- <th scope="col">#</th> -->
-            <th scope="col">Titulo</th>
+            <th scope="col">Dependencia</th>
             <th scope="col">Descripcion</th>
             <th scope="col">creado</th>
             <th scope="col">acciones</th>
@@ -63,11 +63,11 @@
                         <td> <?php echo $row['description'] ?> </td>
                         <td> <?php echo $row['created_at'] ?> </td>
                         <td> 
-                            <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-primary">
+                            <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-dark">
                                 Editar
                             </a>
-                            <a href="delete-task.php?id=<?php echo $row['id']?>" class="btn btn-danger">
-                                Eliminar
+                            <a href="delete-task.php?id=<?php echo $row['id']?>" class="btn btn-success">
+                                Finalizado
                             </a>
                         </td>
                     </tr>

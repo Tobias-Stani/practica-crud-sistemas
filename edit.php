@@ -33,8 +33,8 @@
 
 <?php include("includes/header.php") ?>
 
-
-<div class="col-md-4">
+<div class="col-md-4 mx-auto my-5">
+    <!-- 'mx-auto' centrará horizontalmente y 'my-5' agregará márgenes en la parte superior e inferior -->
 
     <div class="card card-body">
         <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST" >
@@ -51,5 +51,6 @@
     </div>
 
 </div>
+
 
 <?php include("includes/footer.php") ?>

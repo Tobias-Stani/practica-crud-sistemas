@@ -1,8 +1,8 @@
-<footer class="bg-light text-center text-lg-start">
+<footer class="bg-success text-center text-lg-start">
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+  <div class="text-center p-3 text-white" >
     © 2023 
-    <a class="text-dark" href="https://mdbootstrap.com/">direccion general de sistemas</a>
+    <a class="text-white" href="https://mdbootstrap.com/">direccion general de sistemas</a>
   </div>
   <!-- Copyright -->
 </footer>

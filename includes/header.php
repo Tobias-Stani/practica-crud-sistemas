@@ -10,10 +10,14 @@
 </head>
 <body>
 
-<nav class="navbar bg-success">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <h3 class="m-1 fw-light text-white">SISTEMAS</h3>
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <div class="container-md d-flex justify-content-center align-items-center">
+    <a class="navbar-brand text-center" href="#">
+      <span class="d-block fs-4 fw-bold text-white">CON VOS,</span>
+      <span class="d-block fs-4 fw-bold text-white">SOMOS MAS GRANDES.</span>
     </a>
   </div>
 </nav>
+
+
+
