@@ -19,10 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: index.php"); // Redirigir a la página principal
             exit();
         } else {
-            $error_message = "Credenciales incorrectas";
+            $error_message = "Datos incorrectos";
         }
     } else {
-        $error_message = "Credenciales incorrectas";
+        $error_message = "Datos incorrectos";
     }
 }
 ?>
