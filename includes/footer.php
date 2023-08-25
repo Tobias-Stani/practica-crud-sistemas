@@ -30,6 +30,10 @@
     <a class="text-white" href="https://mdbootstrap.com/">direccion general de sistemas</a>
 </footer>
 
+<!-- animaciones scroll -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- animaciones scroll -->
+
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 <!-- bootstrap -->

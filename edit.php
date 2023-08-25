@@ -11,6 +11,7 @@
             $row = mysqli_fetch_array($result);
             $title = $row['title'];
             $description = $row ['description'];
+            $direccion = $row ['direccion'];
         }
     }
 
@@ -18,8 +19,9 @@
         $id = $_GET['id'];
         $title = $_POST['title'];
         $description = $_POST['description'];
+        $direccion = $_POST['direccion'];
 
-        $query =  "UPDATE task set title = '$title', description = '$description' where id = $id ";
+        $query = "UPDATE task SET title = '$title', description = '$description', direccion = '$direccion' WHERE id = $id";
         mysqli_query($conn, $query);
 
         $_SESSION['message'] = 'tarea editada correctamente';
@@ -32,6 +34,7 @@
 ?>
 
 <?php include("includes/header.php") ?>
+<?php include("includes/navAbajoDelHeader.php") ?>
 
 <div class="col-md-4 mx-auto my-5">
     <!-- 'mx-auto' centrará horizontalmente y 'my-5' agregará márgenes en la parte superior e inferior -->
@@ -43,6 +46,9 @@
             </div>
             <div class="form-group">
                 <textarea name="description" rows="2" class="form-control mt-1" placeholder="descripcion"><?php echo $description; ?></textarea>
+            </div>
+            <div class="form-group">
+                <textarea name="direccion" rows="2" class="form-control mt-1" placeholder="direccion"><?php echo $direccion; ?></textarea>
             </div>
             <button class="btn btn-success mt-2" name="update">
                 Actualizar
