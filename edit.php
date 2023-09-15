@@ -4,24 +4,27 @@
 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-        $query = "SELECT * FROM task WHERE id = $id";
+        $query = "SELECT * FROM partidos WHERE id = $id";
         $result = mysqli_query($conn, $query);
 
         if(mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_array($result);
-            $title = $row['title'];
-            $description = $row ['description'];
-            $direccion = $row ['direccion'];
+            $partido = $row['partido'];
+            $fecha = $row ['fecha'];
+            $resultado = $row ['resultado'];
+            $link = $row ['link'];
+            $competencia = $row ['competencia'];
         }
     }
 
     if (isset($_POST['update'])){
         $id = $_GET['id'];
-        $title = $_POST['title'];
-        $description = $_POST['description'];
-        $direccion = $_POST['direccion'];
+        $partido = $row['partido'];
+        $fecha = $row ['fecha'];
+        $link = $row ['link'];
+        $competencia = $row ['competencia'];
 
-        $query = "UPDATE task SET title = '$title', description = '$description', direccion = '$direccion' WHERE id = $id";
+        $query = "UPDATE partidos SET partido = '$partido', fecha = '$fecha', link = '$link', competencia = '$competencia' WHERE id = $id";
         mysqli_query($conn, $query);
 
         $_SESSION['message'] = 'tarea editada correctamente';
@@ -41,21 +44,23 @@
 
     <div class="card card-body">
         <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST" >
-            <div class="form-group">
-                <input type="text" name="title" class="form-control" value="<?php echo $title; ?>" autofocus>
+            <div class="form-group m-3">
+                <input type="text" name="partido" class="form-control" value="<?php echo $partido; ?>" placeholder="Partido" autofocus>
             </div>
-            <div class="form-group">
-                <textarea name="description" rows="2" class="form-control mt-1" placeholder="descripcion"><?php echo $description; ?></textarea>
+            <div class="form-group m-3">
+                <input type="date" name="fecha" class="form-control" value="<?php echo $fecha; ?>" placeholder="Fecha">
             </div>
-            <div class="form-group">
-                <textarea name="direccion" rows="2" class="form-control mt-1" placeholder="direccion"><?php echo $direccion; ?></textarea>
+            <div class="form-group m-3">
+                <input type="text" name="link" class="form-control" value="<?php echo $link; ?>" placeholder="Link">
             </div>
-            <button class="btn btn-success mt-2" name="update">
+            <div class="form-group m-3">
+                <input type="text" name="competencia" class="form-control" value="<?php echo $competencia; ?>" placeholder="Competencia">
+            </div>
+            <button class="btn btn-success mt-3" name="update">
                 Actualizar
             </button>
         </form>
     </div>
-
 </div>
 
 

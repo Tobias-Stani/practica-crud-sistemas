@@ -24,7 +24,7 @@
     <!-- Aquí va tu contenido principal -->
 </div>
 
-<footer class="bg-success text-center text-white p-3">
+<footer class="bg-dark text-center text-white p-3">
     <!-- Copyright -->
     © 2023 
     <a class="text-white" href="https://mdbootstrap.com/">direccion general de sistemas</a>

@@ -5,10 +5,10 @@ if (!isset($_SESSION)) {
 }
 
 $conn = mysqli_connect(
-    'localhost',
-    'root',
     '',
-    'php-mysql-crud',
+    '',
+    '',
+    '',
 );
 
 

@@ -8,10 +8,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="formulario.php">Formulario</a>
+          <a class="nav-link active" aria-current="page" href="./formulario.php">Formulario</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Pendientes</a>
+          <a class="nav-link" href="./index.php">Partidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/PARTIDOS/galery/galery.php">Recuerdos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/PARTIDOS/galery/save-memorie.php">Guardar recuerdo</a>
         </li>
       </ul>
     </div>

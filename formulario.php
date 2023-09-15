@@ -20,13 +20,19 @@
     <div class="card card-body">
         <form action="save-task.php" method="post">
             <div class="form-groupp">
-                <input type="text" name="title" class="form-control m-3 p-2" placeholder="Dependencia" autofocus>
+                <input type="text" name="partido" class="form-control m-3 p-2" placeholder="partido" autofocus>
             </div>
             <div class="form-groupp">
-                <textarea name="description" rows="2" class="form-control m-3 p-2" placeholder="Problema"></textarea>
+                <input type="text" name="resultadao" class="form-control m-3 p-2" placeholder="resultado" autofocus>
             </div>
             <div class="form-groupp">
-                <textarea name="direccion" rows="2" class="form-control m-3 p-2" placeholder="Direccion"></textarea>
+                <input type="date" name="fecha" rows="2" class="form-control m-3 p-2" placeholder="fecha"></input>
+            </div>
+            <div class="form-groupp">
+                <input type="text" name="competencia" class="form-control m-3 p-2" placeholder="competencia" autofocus>
+            </div>
+            <div class="form-groupp">
+                <input type="text" name="link" class="form-control m-3 p-2" placeholder="link" autofocus>
             </div>
             <input type="submit" class="btn btn-success btn-block mt-1" name="save-task" value="guardar">
         </form>

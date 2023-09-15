@@ -12,48 +12,37 @@
         <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Dependencia</th>
-                            <th scope="col">Descripcion</th>
-                            <th scope="col">Direccion</th>
-                            <th scope="col">creado</th>
-                            <th scope="col">acciones</th>
+                            <th scope="col">PARTIDOS</th>
+                            <th scope="col">FECHA</th>
+                            <th scope="col">RESULTADO</th>
+                            <th scope="col">COMPETENCIA</th>
+                            <th scope="col">LINK</th>
+                            <th scope="col">ACCIONES</th>
                         </tr>
                     </thead>
-            <tbody>
-                <?php
-                $query = "SELECT * FROM task ";
-                $resultTask =  mysqli_query($conn, $query);
-            
-                while ($row = mysqli_fetch_array($resultTask)) {
-                    $taskDate = strtotime($row['created_at']);
-                    $yesterday = strtotime('-1 day');
-                    $today = strtotime('today');
-                    
-                    $rowColorClass = '';
-                    
-                    if ($taskDate > $today) {
-                        $rowColorClass = 'table-warning'; // Amarillo para tareas nuevas
-                    } elseif ($taskDate < $yesterday) {
-                        $rowColorClass = 'table-danger'; // Rojo para tareas viejas
-                    }
-                
-                ?>
-                <tr class="<?php echo $rowColorClass; ?>">
-                    <td> <?php echo $row['title'] ?> </td>
-                    <td> <?php echo $row['description'] ?> </td>
-                    <td> <?php echo $row['direccion'] ?> </td>
-                    <td> <?php echo $row['created_at'] ?> </td>
-                    <td> 
-                        <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-dark">
-                            Editar
-                        </a>
-                        <a href="delete-task.php?id=<?php echo $row['id']?>" class="btn btn-success">
-                            Finalizado
-                        </a>
-                    </td>
-                </tr>
-                <?php } ?>
-            </tbody>
+                    <tbody>
+                        <?php
+                        $query = "SELECT * FROM partidos";
+                        $resultTask = mysqli_query($conn, $query);
+
+                        while ($row = mysqli_fetch_assoc($resultTask)) {
+                            // Aquí dentro del bucle while, puedes acceder a los datos de cada fila
+                            $rowColorClass = ''; // Puedes definir la clase CSS según tus necesidades
+
+                            echo '<tr class="' . $rowColorClass . '">';
+                            echo '<td>' . $row['partido'] . '</td>';
+                            echo '<td>' . $row['resultado'] . '</td>';
+                            echo '<td>' . $row['fecha'] . '</td>';
+                            echo '<td>' . $row['competencia'] . '</td>';
+                            echo '<td>' . $row['link'] . '</td>';
+                            echo '<td>';
+                            echo '<a href="edit.php?id=' . $row['id'] . '" class="btn btn-dark">Editar</a>';
+                            // echo '<a href="delete-task.php?id=' . $row['id'] . '" class="btn btn-success">Finalizado</a>';
+                            echo '</td>';
+                            echo '</tr>';
+                        }
+                        ?>
+                    </tbody>
         </table>
     </div>
 </div>
